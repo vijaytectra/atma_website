@@ -1,0 +1,50 @@
+.SidebarBlog {
+  position: relative;
+}
+.sidebarMainRow,
+.sidebarRow {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.sidebarCol {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: clamp(12px, 1vw, 1vw);
+  align-items: center;
+}
+.sideContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(10px, 1vh, 1vh);
+}
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: clamp(5px, 0.5vw, 0.5vw);
+}
+.flexCol {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: clamp(5px, 0.5vw, 0.5vw);
+}
+.sideContent h4 {
+  transition: all 0.3s ease;
+}
+.sideContent h4:hover {
+  color: var(--primary);
+}
+.sidebarHR {
+  margin: clamp(20px, 2vh, 2vh) 0;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1211px) {
+  .author {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: clamp(40px, 4vw, 4vw);
+  }
+}

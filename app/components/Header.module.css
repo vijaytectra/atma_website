@@ -1,0 +1,183 @@
+/* Basic header styles */
+.header {
+  padding: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.header a {
+  font-family: var(--font-heading) !important;
+}
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.menuIconImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.nav {
+  display: flex;
+  gap: clamp(10px, 2vw, 2vw);
+  transition: transform 0.3s ease;
+}
+
+.navLink {
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: clamp(16px, 1vw, 1vw);
+  font-weight: 400;
+  transition: color 0.3s ease;
+  font-family: var(--font-heading);
+  display: flex;
+}
+
+.activeNavLink {
+  color: var(--primary);
+  font-weight: bold;
+}
+.logo {
+  width: clamp(180px, 17vw, 17vw);
+}
+
+/* Donation button */
+.donationButton {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+/* Mobile menu icon */
+.menuIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 1279px) {
+  .nav,
+  .donationButton,
+  .dnone {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+    z-index: 2; /* Ensures menu icon is always above other elements */
+  }
+
+  /* Mobile nav open styles */
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 9%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid var(--color-light-gray);
+    max-height: 80vh; /* Set a max height so it fits within the screen */
+    overflow-y: auto; /* Ensure links are scrollable if needed */
+    z-index: 9; /* Ensures the nav menu appears on top */
+  }
+
+  .navItem {
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+  .nav .navItem:last-child {
+    border-bottom: none;
+  }
+
+  .nav a {
+    padding: 15px; /* Increase padding for better spacing */
+    font-size: clamp(16px, 4vw, 18px);
+    display: block;
+    text-align: left; /* Center align the links */
+    display: flex;
+  }
+  .nav .navItem:last-child {
+    display: block !important;
+  }
+}
+
+/* Submenu styles */
+.navItem {
+  position: relative;
+}
+.nav .navItem:last-child {
+  display: none;
+}
+
+.nav .navItem:nth-last-child(2) {
+  display: none;
+}
+
+.hasSubmenu .submenuIcon {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 10;
+  min-width: 14vw;
+  padding-bottom: 0;
+}
+
+.submenu.open {
+  display: block;
+}
+
+.submenuLink {
+  display: block;
+  padding: 10px 20px;
+  color: var(--color-black);
+  text-decoration: none;
+  font-size: clamp(14px, 1vw, 1vw);
+  font-weight: 400;
+}
+
+.submenuLink:hover {
+  background-color: var(--color-light-gray);
+}
+
+/* Mobile menu adjustments */
+@media screen and (max-width: 1024px) {
+  .navItem {
+    position: relative;
+  }
+
+  .submenu {
+    position: relative;
+    display: none;
+    background: var(--color-white);
+    box-shadow: none;
+    padding-left: 20px;
+  }
+
+  .submenu.open {
+    display: block;
+  }
+  .nav .navItem:nth-last-child(2) {
+    display: block !important;
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

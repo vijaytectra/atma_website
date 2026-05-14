@@ -1,0 +1,65 @@
+.BlogInnerPage {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: var(--color-white);
+}
+.BlogInnerPageRow {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  column-gap: clamp(20px, 2vw, 2vw);
+}
+.BlogInnerPageCol {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vh;
+}
+.BlogInnerPageImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.BlogInnerAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flexCol {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: clamp(8px, 0.8vw, 0.8vw);
+}
+.quote {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: clamp(8px, 0.8vw, 0.8vw);
+}
+.imageColumn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.BlogInnerPageCol2 {
+  width: 100%;
+  position: relative;
+}
+.BlogInnerPageCol svg {
+  width: clamp(15px, 0.9vw, 0.9vw);
+}
+
+@media only screen and (max-width: 1210px) {
+  .BlogInnerPageRow {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .imageColumn {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .BlogInnerPageCol {
+    row-gap: 25px;
+  }
+}

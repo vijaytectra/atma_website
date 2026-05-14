@@ -1,0 +1,34 @@
+.contactSection1 {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: var(--color-white);
+}
+.contactSection1Row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+}
+.contactSection1Col {
+  position: relative;
+  overflow: hidden;
+}
+.contactSection1Col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+.contactSection1Col img:hover {
+  transform: scale(1.1);
+}
+.contactSection1Col2 {
+  position: relative;
+  width: 100%;
+}
+
+@media screen and (width <= 768px) {
+  .contactSection1Row {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}

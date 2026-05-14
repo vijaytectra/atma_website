@@ -1,0 +1,96 @@
+.thirukuralSection {
+  position: relative;
+  padding: clamp(60px, 10vh, 10vh) 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.content {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  max-width: 650px;
+  flex-direction: column;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 2vw);
+  transition: transform 0.5s ease;
+}
+
+.kural p {
+  font-size: 1.5vw;
+  line-height: 1.5;
+  white-space: pre-line;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.title {
+  font-size: 1.5vw !important;
+}
+.description {
+  font-size: 1vw !important;
+}
+.animateSlide {
+  animation: slideAnimation 0.5s ease forwards;
+}
+.carouselImage {
+  width: clamp(40px, 4vw, 4vw);
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .slider,
+  .slide {
+    flex-direction: column;
+  }
+  .title {
+    font-size: 18px !important;
+  }
+  .description {
+    font-size: 16px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .thirukuralSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .kural p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .slider {
+    max-width: 1050px;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .slider {
+    max-width: 1580px;
+  }
+}

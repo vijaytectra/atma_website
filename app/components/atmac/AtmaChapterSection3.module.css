@@ -1,0 +1,54 @@
+.AtmaChapterSection2 {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: var(--color-white);
+}
+.AtmaChapterSection2Row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.AtmaChapterSection2Col {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.checkBoxAtmac {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+}
+.checkBoxAtmac p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: clamp(8px, 0.8vw, 0.8vw);
+}
+.checkBoxAtmac p img {
+  width: clamp(15px, 1.2vw, 1.2vw);
+}
+.AtmaChapterSection2Col2 {
+  position: relative;
+  overflow: hidden;
+}
+.AtmaChapterSection2Col2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: all 1s ease-in;
+}
+.AtmaChapterSection2Col2 img:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1024px) {
+  .AtmaChapterSection2Row {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .checkBoxAtmac {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}

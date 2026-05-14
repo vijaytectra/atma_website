@@ -1,0 +1,67 @@
+/* components/AutoSlider.module.css */
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+.slide {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.instaIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  background-color: #cf1941;
+  padding: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slide:hover .instaIcon {
+  opacity: 1;
+}
+.instaIcon:hover {
+  color: var(--color-white);
+}
+
+@media only screen and (min-width: 1025px) {
+  .slide {
+    min-width: 20vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .slide {
+    min-width: 200px;
+  }
+}

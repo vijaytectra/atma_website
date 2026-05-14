@@ -1,0 +1,11 @@
+nohup: ignoring input
+
+> atma-website@0.1.0 start
+> next start
+
+   ▲ Next.js 15.2.1
+   - Local:        http://localhost:3000
+   - Network:      http://69.62.80.91:3000
+
+ ✓ Starting...
+ ✓ Ready in 735ms

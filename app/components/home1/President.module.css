@@ -1,0 +1,66 @@
+.President {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: #f6f5f1;
+}
+.presidentRow {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  column-gap: clamp(40px, 5vw, 5vw);
+  align-items: center;
+}
+.presidentCol1 {
+  position: relative;
+}
+.bannerRed {
+  background-color: #f9c5d0;
+  position: absolute;
+  top: 85%;
+  right: -10%;
+  padding: clamp(10px, 1vw, 1vw);
+  width: clamp(160px, 14vw, 14vw);
+  text-align: center;
+}
+.bannerRed h6 {
+  color: #000;
+  font-size: clamp(16px, 1.3vw, 1.3vw);
+}
+.presidentCol1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.presidentCol2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2vh;
+}
+.presidentName {
+  position: relative;
+  margin-left: 10px;
+}
+.presidentName::before {
+  content: "";
+  background-color: var(--primary);
+  position: absolute;
+  left: -10px;
+  top: 0;
+  width: 3px;
+  height: 85%;
+}
+@media only screen and (max-width: 800px) {
+  .presidentRow {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .bannerRed {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: clamp(150px, 11vw, 11vw);
+  }
+  .President {
+    padding: 60px 0;
+  }
+}

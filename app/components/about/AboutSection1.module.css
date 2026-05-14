@@ -1,0 +1,70 @@
+.AboutSection1 {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: var(--color-white);
+}
+.AboutSection1Row {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(30px, 3vh, 3vh);
+}
+.AboutSection1Col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.AboutSection1ColInner {
+  position: relative;
+}
+.AboutSection1ColInner .AboutSection1ColInner1Img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.AboutSection1ColInner2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.AboutSection1Col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(20px, 2vw, 2vw);
+  padding-top: clamp(60px, 12vh, 12vh);
+}
+.AboutSection1Col3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+}
+.asBox {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(15px, 1.5vh, 1.5vh);
+  background-color: var(--background-1);
+  padding: clamp(20px, 2vw, 2vw);
+  transition: all 0.3s ease;
+}
+.asBox:hover {
+  background-color: var(--primary);
+}
+.asBox:hover h3,
+.asBox:hover p {
+  color: var(--color-white);
+}
+
+@media only screen and (max-width: 768px) {
+  .AboutSection1Col {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .AboutSection1Col2 {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+  .AboutSection1Col3 {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+}

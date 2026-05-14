@@ -1,0 +1,100 @@
+.AboutHome {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-color: var(--color-white);
+}
+.ahRow1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: clamp(20px, 12vh, 12vh);
+}
+.ahInnerRow {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+}
+.ahCol {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(12px, 1vh, 1vh);
+  background-color: #f6f5f1;
+  padding: clamp(20px, 2vw, 2vw);
+  transition: all 0.3s ease;
+}
+.ahCol p {
+  font-size: clamp(14px, 0.9vw, 0.9vw);
+}
+.ahInnerRow .ahCol:hover {
+  background-color: var(--primary);
+  color: #fff;
+}
+.ahInnerRow .ahCol:hover p {
+  color: #fff;
+}
+.ahInnerRow .ahCol:nth-child(1) h4 {
+  color: var(--color-white);
+}
+.ahRow2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.ahRow2Col {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 5vh, 5vh);
+  align-items: flex-start;
+}
+.ahRow2Col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.ahRow2ColInner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 1vw, 1vw);
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.ahRow2ColInnerTitle {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(10px, 1vh, 1vh);
+}
+.ahRow2ColInnerContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(10px, 1vh, 1vh);
+  align-items: flex-end;
+}
+.ahRow2ColInnerContent p {
+  font-size: clamp(14px, 0.9vw, 0.9vw);
+}
+@media only screen and (max-width: 1024px) {
+  .ahInnerRow {
+    width: 100%;
+  }
+  .ahRow2ColInner {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ahRow2 {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+  .ahInnerRow {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 30px;
+  }
+  .AboutHome {
+    padding: 60px 0;
+  }
+}

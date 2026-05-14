@@ -1,0 +1,47 @@
+.AtmaChapterSection1 {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+}
+.AtmaChapterSection1Row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.AtmaChapterSection1Col {
+  position: relative;
+  overflow: hidden;
+}
+.AtmaChapterSection1Col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+.AtmaChapterSection1Col img:hover {
+  transform: scale(1.1);
+}
+.AtmaChapterSection1Col2 {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.iconBoxAtmac {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.iconAtmac {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: clamp(10px, 1vw, 1vw);
+}
+
+@media only screen and (max-width: 1024px) {
+  .AtmaChapterSection1Row {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}

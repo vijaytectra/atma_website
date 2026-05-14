@@ -1,0 +1,57 @@
+.visionSection {
+  position: relative;
+  padding: clamp(60px, 12vh, 12vh) 0;
+  background-image: linear-gradient(to bottom, transparent 50%, #fff 50%),
+    url("../../../public/pageHeader/vision-bg.png");
+  padding-bottom: 0;
+}
+.visionMainRow {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.visionRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(30px, 4vw, 4vw);
+  max-width: 80%;
+  align-self: center;
+}
+.visionCol {
+  background-color: #f6f5f1;
+  padding: clamp(20px, 2vw, 2vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: clamp(15px, 1.5vw, 1.5vw);
+}
+.visionCol img {
+  width: clamp(40px, 4vw, 4vw);
+}
+.counterRow {
+  padding: clamp(60px, 12vh, 12vh) 0;
+}
+.counterRow h2 {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 767px) {
+  .visionSection {
+    background-image: url("../../../public/pageHeader/vision-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .visionRow {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    row-gap: 30px;
+  }
+  .visionSection {
+    padding: 60px 0;
+  }
+  .counterRow {
+    padding: 60px 0;
+  }
+}

@@ -1,0 +1,17 @@
+/* components/Button.module.css */
+.button {
+  background-color: var(--bg-color, #cf1941);
+  color: var(--text-color, #ffffff);
+  font-size: clamp(16px, 1vw, 1vw);
+  padding: clamp(8px, 0.8vw, 0.8vw) clamp(20px, 2vw, 2vw);
+  width: auto;
+  border-radius: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optional hover effect */
+.button:hover {
+  background-color: var(--hover-bg-color, #fff);
+  color: var(--hover-txt-color, #cf1941);
+}

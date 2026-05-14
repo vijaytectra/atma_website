@@ -1,0 +1,54 @@
+.AboutSection2 {
+  position: relative;
+  background-color: var(--background);
+}
+.AboutSection2Row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: clamp(20px, 2vw, 2vw);
+  align-items: center;
+}
+.AboutSection2Col {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(20px, 2vh, 2vh);
+}
+.AboutSection2Col2 {
+  position: relative;
+  overflow: hidden;
+}
+.AboutSection2Col2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+.AboutSection2Col2 img:hover {
+  transform: scale(1.1);
+}
+.numberBox {
+  display: grid;
+  grid-template-columns: 7% 1fr;
+  column-gap: clamp(10px, 1vw, 1vw);
+}
+.numberBox h3,
+.numberBox h4 {
+  color: var(--primary);
+}
+
+@media only screen and (max-width: 800px) {
+  .AboutSection2Row {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+  .numberBox {
+    grid-template-columns: auto;
+  }
+  .numberBox h3 {
+    display: none;
+  }
+  .numberBox h4 {
+    margin-bottom: 8px;
+    font-weight: bold !important;
+  }
+}

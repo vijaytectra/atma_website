@@ -1,0 +1,36 @@
+.topbar {
+  position: relative;
+  background-color: rgba(246, 245, 241, 1);
+  padding: clamp(10px, 0.5vw, 0.5vw) 0;
+}
+.topbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.topbarContent p,
+.topbarContent a {
+  font-size: clamp(14px, 0.8vw, 00.8vw);
+}
+.socialTopbar,
+.socialIcons {
+  display: flex;
+  gap: 1vw;
+  position: relative;
+  align-items: center;
+}
+.socialIcons img {
+  transition: transform 0.3s ease;
+  width: 1.5vw;
+  height: auto;
+}
+.socialIcons img:hover {
+  transform: scale(1.2);
+}
+
+@media only screen and (max-width: 1279px) {
+  .topbar {
+    display: none;
+  }
+}

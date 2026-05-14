@@ -1,0 +1,75 @@
+/* components/ScrollingGallery.module.css */
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.scroller {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Adjust the speed as needed */
+}
+
+.scroller:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.item {
+  position: relative;
+  min-width: 300px;
+  margin-right: 20px;
+  transition: transform 0.3s;
+  text-align: center; /* Center-align the title */
+}
+
+.image {
+  width: 100%;
+  height: auto; /* Adjust height to fit title below */
+  object-fit: cover;
+}
+
+.title {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  color: #000; /* Style the title text */
+}
+
+.readMore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  color: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.item:hover .readMore {
+  display: flex;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      -50%
+    ); /* Moves to half the width, as items are duplicated */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    min-width: 200px;
+  }
+}

@@ -1,0 +1,70 @@
+.contactFormContainer {
+  padding: clamp(10px, 2vw, 2vw);
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: clamp(24px, 3vw, 3vw);
+  margin-bottom: clamp(20px, 1.5vw, 11.5vw);
+}
+
+.description {
+  font-size: clamp(14px, 1.2vw, 1.2vw);
+  margin-bottom: clamp(15px, 2vw, 2vw);
+  color: #555;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vw, 2vw);
+}
+
+.row {
+  display: flex;
+  gap: clamp(10px, 2vw, 2vw);
+}
+
+.inputContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: clamp(16px, 1vw, 1vw);
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: clamp(8px, 0.8vw, 0.8vw);
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: clamp(14px, 1.2vw, 11.2vw);
+  outline: none;
+}
+
+.textarea {
+  height: clamp(80px, 15vw, 15vw);
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: var(--secondary);
+  color: var(--text-color, #ffffff);
+  font-size: clamp(16px, 1vw, 1vw);
+  padding: clamp(8px, 0.8vw, 0.8vw) clamp(20px, 2vw, 2vw);
+  width: fit-content;
+  border: none;
+  border-radius: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #fff;
+  color: #000000;
+}

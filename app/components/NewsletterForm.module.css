@@ -1,0 +1,61 @@
+/* NewsletterForm.module.css */
+
+.NewsletterForm {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+}
+
+.NewsletterForm .input {
+  flex: 1;
+  padding: 14px;
+  font-size: clamp(0.875rem, 1vw, 1vw);
+  border: none;
+  outline: none;
+  background-color: #a31534;
+  color: #fff;
+}
+
+.NewsletterForm .button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 14px;
+  font-size: clamp(0.875rem, 1vw, 1vw);
+  background-color: #faf2e9;
+  color: var(--primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.NewsletterForm .button:hover {
+  background-color: var(--btn-hover);
+  color: var(--color-black);
+}
+.successMessage {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .NewsletterForm .button {
+    padding: 11.2px;
+  }
+  .NewsletterForm .input {
+    padding: 11.3px;
+  }
+}
