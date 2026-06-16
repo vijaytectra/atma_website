@@ -121,13 +121,13 @@ const governer = [
   },
   {
     name: "Dr. Karunakaravel, MD",
-    designation: "ATMA governor - Ohio Chapter",
+    designation: "ATMA Governor - Ohio Chapter",
     image: "/home/bm/13.jpg",
     link: "https://www.linkedin.com/in/kk-2009/",
   },
   {
     name: "Dr.Nedunchezhian Sithian,MD",
-    designation: "ATMA governor - New York/New Jersey chapter",
+    designation: "ATMA Governor - New York /  \nNew Jersey Chapter",
     image: "/home/bm/14.png",
     link: "#",
   },
@@ -155,7 +155,7 @@ function BoardMembers() {
                       />
                     </div>
                     <h4 className="mt-4">{bm.name}</h4>
-                    <p>{bm.designation}</p>
+                    <p className={styles.designation}>{bm.designation}</p>
                     <div className={styles.bmsocial}>
                       <Link
                         href={bm.link}
@@ -192,7 +192,7 @@ function BoardMembers() {
                         />
                       </div>
                       <h4 className="mt-4">{bm.name}</h4>
-                      <p>{bm.designation}</p>
+                      <p className={styles.designation}>{bm.designation}</p>
                       <div className={styles.bmsocial}>
                         <Link
                           href={bm.link}
@@ -228,7 +228,7 @@ function BoardMembers() {
                         />
                       </div>
                       <h4 className="mt-4">{bm.name}</h4>
-                      <p>{bm.designation}</p>
+                      <p className={styles.designation}>{bm.designation}</p>
                       <div className={styles.bmsocial}>
                         <Link
                           href={bm.link}
@@ -267,7 +267,7 @@ function BoardMembers() {
                       />
                     </div>
                     <h4 className="mt-4">{bm.name}</h4>
-                    <p>{bm.designation}</p>
+                    <p className={styles.designation}>{bm.designation}</p>
                     <div className={styles.bmsocial}>
                       <Link
                         href={bm.link}
