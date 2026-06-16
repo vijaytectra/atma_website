@@ -127,7 +127,7 @@ const governer = [
   },
   {
     name: "Dr.Nedunchezhian Sithian,MD",
-    designation: "ATMA Governor - New York /  \nNew Jersey Chapter",
+    designation: "ATMA Governor - \nNew York /  New Jersey Chapter",
     image: "/home/bm/14.png",
     link: "#",
   },
