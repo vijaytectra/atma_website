@@ -46,8 +46,14 @@
 }
 .bmImg {
   width: 100%;
-  /*height: 100%;*/
+  height: 100%;
   object-fit: cover;
+}
+.imageFrame {
+  width: 100%;
+  aspect-ratio: 262 / 285;
+  overflow: hidden;
+  position: relative;
 }
 .bmCol2Inner h4 {
   font-size: clamp(17px, 1.1vw, 1.1vw);

@@ -125,6 +125,12 @@ const governer = [
     image: "/home/bm/13.jpg",
     link: "https://www.linkedin.com/in/kk-2009/",
   },
+  {
+    name: "Dr.Nedunchezhian Sithian,MD",
+    designation: "ATMA governor - New York/New Jersey chapter",
+    image: "/home/bm/14.png",
+    link: "#",
+  },
 ];
 function BoardMembers() {
   return (
@@ -138,7 +144,7 @@ function BoardMembers() {
               <div className="max-w-2xs sm:max-w-full grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-14 mt-8">
                 {BoardMemebrs.map((bm, index) => (
                   <div key={index} className={`${styles.bmCol2Inner}`}>
-                    <div className="overflow-hidden relative">
+                    <div className={styles.imageFrame}>
                       <Image
                         className={`${styles.bmImg} transition-transform duration-1000 ease-in-out hover:scale-105`}
                         src={bm.image}
@@ -175,7 +181,7 @@ function BoardMembers() {
                 <div className="max-w-2xs sm:max-w-full mt-8">
                   {treasurer.map((bm, index) => (
                     <div key={index} className={`${styles.bmCol2Inner}`}>
-                      <div className="overflow-hidden relative">
+                      <div className={styles.imageFrame}>
                         <Image
                           className={`${styles.bmImg} transition-transform duration-1000 ease-in-out hover:scale-105`}
                           src={bm.image}
@@ -211,7 +217,7 @@ function BoardMembers() {
                 <div className="max-w-2xs sm:max-w-full mt-8">
                   {secretary.map((bm, index) => (
                     <div key={index} className={`${styles.bmCol2Inner}`}>
-                      <div className="overflow-hidden relative">
+                      <div className={styles.imageFrame}>
                         <Image
                           className={`${styles.bmImg} transition-transform duration-1000 ease-in-out hover:scale-105`}
                           src={bm.image}
@@ -250,7 +256,7 @@ function BoardMembers() {
               <div className="max-w-2xs sm:max-w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-14 mt-8">
                 {governer.map((bm, index) => (
                   <div key={index} className={`${styles.bmCol2Inner}`}>
-                    <div className="overflow-hidden relative">
+                    <div className={styles.imageFrame}>
                       <Image
                         className={`${styles.bmImg} transition-transform duration-1000 ease-in-out hover:scale-105`}
                         src={bm.image}
